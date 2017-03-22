@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<h1 class="text-center welcomecategories">Welcome</h1>
+
+
+<ul>
+  <% @questions.each() do |question|%>
+    <li><%=link_to question.query, question_path(question)%></li>
+  <%end%>
+</ul>
+
+<%= link_to "New Question", new_question_path %>
