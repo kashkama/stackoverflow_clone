@@ -1,11 +1,34 @@
 <!DOCTYPE html>
-<h1 class="text-center welcomecategories">Welcome</h1>
+
+<div class="container">
+      <div class="row">
+          <div class="col-xs-9">
+              <div class="main-content">
+                <div class="">
+                  <%= link_to "New Question", new_question_path, class:"btn btn-primary floatleft"%>
+
+                  <ul class="listdecorations">
+                    <div class="bs-example">
+                      <% @questions.each() do |question|%>
+                      <div class="panel panel-default">
+                          <div class="panel-body"><li><%=link_to question.query, question_path(question)%> by <%= question.author%></li></div>
+                          <div class="panel-footer clearfix">
+                          <div class="pull-right">
+                            <a href="#" class="btn btn-default">Upvote</a>
+                            <a href="#" class="btn btn-default">Downvote</a>
+                          </div>
+                        </div>
+                      </div>
+                      <%end%>
+                    </div>
+                </ul>
 
 
-<ul>
-  <% @questions.each() do |question|%>
-    <li><%=link_to question.query, question_path(question)%></li>
-  <%end%>
-</ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4">
 
-<%= link_to "New Question", new_question_path %>
+          </div>
+      </div>
+  </div>

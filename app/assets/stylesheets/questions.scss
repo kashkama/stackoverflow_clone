@@ -1,3 +1,28 @@
 // Place all the styles related to the Questions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// index
+.floatleft{
+  margin-left:10px;
+}
+
+.listdecorations{
+  list-style: none;
+  font-size: 22px;
+  font-weight:bold;
+  color: #000000;
+}
+
+.main-content{
+  width: 100%;
+  background:#c3c3c3;
+}
+.sidebar-content{
+  background:#b4bac0;
+}
+
+.bs-example{
+  margin: 20px;
+  padding-bottom: 10px;
+}
